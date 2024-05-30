@@ -55,29 +55,32 @@ This Java application simulates a sandwich shop where users can place orders for
 - Handling of invalid options
 - If the user enters incorrect inputs the menu will loop back and ask them to try again instead of crashing the program.
 
-
-![CapstoneTwo_InvalidOptionHandling.PNG](..%2FCapstoneTwo_InvalidOptionHandling.PNG)
-
-
-- For each menu there is a do while statement handles invalid number inputs, but I added a try catch statement with a InputMismatchException in the catch to handle invalid letter inputs.
+![CapstoneTwo_InvalidOptionHandling](https://github.com/SergJac/CapstoneTwo_Deli/assets/166542383/e2664df1-1b00-4832-89dc-4232312081e7)
 
 
-![CapstoneTwo_InvalidOptionHandlingCode.PNG](..%2FCapstoneTwo_InvalidOptionHandlingCode.PNG)
+
+- For each menu there is a do while statement that handles invalid number inputs, but I added a try catch statement with a InputMismatchException in the catch to handle invalid letter inputs.
+
+
+![CapstoneTwo_InvalidOptionHandlingCode](https://github.com/SergJac/CapstoneTwo_Deli/assets/166542383/a37e50fd-2cc3-4b93-88a8-836e967cd600)
+
 
 
 - For menu options that ask for a "yes" or "no" input I used a do while statement to handle invalid number inputs and if (else if) else statement to handle invalid letter inputs and loop the menu to get a valid input.
 
-![CapstoneTwo_InvalidOptionHandlingCodeYesNo.PNG](..%2FCapstoneTwo_InvalidOptionHandlingCodeYesNo.PNG)
+![CapstoneTwo_InvalidOptionHandlingCodeYesNo](https://github.com/SergJac/CapstoneTwo_Deli/assets/166542383/8b537bd8-c7fa-441a-9c0c-c58bb6fecf97)
+
 
 
 - No toppings option
 - No Sauce option
 
 
-![CapstoneTwo_NoToppingsSauceOption.PNG](..%2FCapstoneTwo_NoToppingsSauceOption.PNG)
+![CapstoneTwo_NoToppingsNoSauceOption](https://github.com/SergJac/CapstoneTwo_Deli/assets/166542383/6ffd59ac-8bac-4c03-a52b-cb05dcc0454a)
+
 
 
 - I modified the if else statement in order to add this feature and my reasoning behind it was in case the user accidentally decides to add another topping or sauce or if they do not want any toppings or sauce.
 
 
-![CapstoneTwo_NoToppingsSauceOptionCode.PNG](..%2FCapstoneTwo_NoToppingsSauceOptionCode.PNG)
+![CapstoneTwo_NoToppingsNoSauceOptionCode](https://github.com/SergJac/CapstoneTwo_Deli/assets/166542383/41658da7-ec5b-469d-a1b2-a45a197451a6)
