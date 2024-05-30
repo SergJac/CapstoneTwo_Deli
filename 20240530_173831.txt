@@ -1,27 +1,27 @@
------ Checkout -----
+----- Receipt -----
 Sandwich Size: 4 Inches
 Selected Bread: White
-Bread Toasted: Yes
+Bread Toasted: No
 Bread Price: $ 5.50
 
 Selected Meat: Steak
 Meat Price: $ 1.00
 
-Extra Meat: Yes
-Extra Meat Price: $ 0.50
-
+Extra Meat: No
 Selected Cheese: American
 Cheese Price: $ 0.75
 
-Extra Cheese: Yes
-Extra Cheese Price: $ 0.30
-
+Extra Cheese: No
 Selected Toppings: [Lettuce]
 Selected Sauces: [Mayo]
-Drink size: Medium
-Drink price: $ 2.50
+
+Drink Type: Ginger Ale
+Drink Size: Large
+Drink Price: $ 3.00
+
+Chips Type: Fritos Original Corn Chips
 
 Chips Price: $ 1.50
 
-Total Price: $ 12.05
+Total Price: $ 11.75
 

@@ -50,3 +50,34 @@ This Java application simulates a sandwich shop where users can place orders for
 1. Run the `Main` class to start the application.
 2. Follow the prompts on the command line to place orders, customize sandwich options, add drinks and chips, and proceed to checkout.
 3. After checkout, a receipt file with the order details will be generated in the project directory.
+
+## Additional Features:
+- Handling of invalid options
+- If the user enters incorrect inputs the menu will loop back and ask them to try again instead of crashing the program.
+
+
+![CapstoneTwo_InvalidOptionHandling.PNG](..%2FCapstoneTwo_InvalidOptionHandling.PNG)
+
+
+- For each menu there is a do while statement handles invalid number inputs, but I added a try catch statement with a InputMismatchException in the catch to handle invalid letter inputs.
+
+
+![CapstoneTwo_InvalidOptionHandlingCode.PNG](..%2FCapstoneTwo_InvalidOptionHandlingCode.PNG)
+
+
+- For menu options that ask for a "yes" or "no" input I used a do while statement to handle invalid number inputs and if (else if) else statement to handle invalid letter inputs and loop the menu to get a valid input.
+
+![CapstoneTwo_InvalidOptionHandlingCodeYesNo.PNG](..%2FCapstoneTwo_InvalidOptionHandlingCodeYesNo.PNG)
+
+
+- No toppings option
+- No Sauce option
+
+
+![CapstoneTwo_NoToppingsSauceOption.PNG](..%2FCapstoneTwo_NoToppingsSauceOption.PNG)
+
+
+- I modified the if else statement in order to add this feature and my reasoning behind it was in case the user accidentally decides to add another topping or sauce or if they do not want any toppings or sauce.
+
+
+![CapstoneTwo_NoToppingsSauceOptionCode.PNG](..%2FCapstoneTwo_NoToppingsSauceOptionCode.PNG)

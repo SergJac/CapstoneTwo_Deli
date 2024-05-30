@@ -1,0 +1,31 @@
+----- Receipt -----
+Sandwich Size: 12 Inches
+Selected Bread: Wheat
+Bread Toasted: Yes
+Bread Price: $ 8.50
+
+Selected Meat: Steak
+Meat Price: $ 3.00
+
+Extra Meat: Yes
+Extra Meat Price: $ 1.50
+
+Selected Cheese: Swiss
+Cheese Price: $ 2.25
+
+Extra Cheese: Yes
+Extra Cheese Price: $ 0.90
+
+Selected Toppings: [Lettuce, Onions, Tomatoes, Guacamole]
+Selected Sauces: [Mayo, Ketchup]
+
+Drink Type: Ginger Ale
+Drink Size: Large
+Drink Price: $ 3.00
+
+Chips Type: Fritos Original Corn Chips
+
+Chips Price: $ 1.50
+
+Total Price: $ 20.65
+

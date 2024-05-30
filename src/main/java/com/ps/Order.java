@@ -10,12 +10,13 @@ public class Order {
     private String drinkSize;
     private boolean drinkAdded;
     private boolean chipsAdded;
+    private String selectedChip;
+    private double selectedChipPrice;
 
     public Order(int size) {
         this.size = size;
         this.drinkSize = "";
         this.drinkAdded = false;
-        this.chipsAdded = false;
     }
 
     public Order() {
@@ -198,6 +199,22 @@ public class Order {
 
     public void setChipsAdded(boolean chipsAdded) {
         this.chipsAdded = chipsAdded;
+    }
+
+    public String getSelectedChip() {
+        return selectedChip;
+    }
+
+    public void setSelectedChip(String selectedChip) {
+        this.selectedChip = selectedChip;
+    }
+
+    public double getSelectedChipPrice() {
+        return selectedChipPrice;
+    }
+
+    public void setSelectedChipPrice(double selectedChipPrice) {
+        this.selectedChipPrice = selectedChipPrice;
     }
 
     @Override
