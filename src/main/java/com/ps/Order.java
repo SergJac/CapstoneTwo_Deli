@@ -1,128 +1,212 @@
 package com.ps;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
+    private List<Sandwich> sandwiches;
 
     private int size;
     private String drinkSize;
+    private boolean drinkAdded;
+    private boolean chipsAdded;
 
-    private ArrayList<Product> customerOrder;
-
-    public Order(int size, String drinkSize) {
+    public Order(int size) {
         this.size = size;
-        this.drinkSize = drinkSize;
-
-        this.customerOrder = new ArrayList<>();
+        this.drinkSize = "";
+        this.drinkAdded = false;
+        this.chipsAdded = false;
     }
 
-    public int breadSizeOptions(){
-        return size;
+    public Order() {
+        this.sandwiches = new ArrayList<>();
     }
 
-    public String getBreadPrice(){
-        int chosenBreadSize = breadSizeOptions();
+
+    public double getBreadPrice(int sizeChoice){
         double breadPrice = 0.0;
 
-        if (chosenBreadSize == 4){
-            breadPrice = 5.50;
-        } else if (chosenBreadSize == 8){
-            breadPrice = 7.00;
-        } else if (chosenBreadSize == 12){
-            breadPrice = 8.50;
+        switch (sizeChoice) {
+            case 1:
+                breadPrice = 5.50;
+                break;
+            case 2:
+                breadPrice = 7.00;
+                break;
+            case 3:
+                breadPrice = 8.50;
+                break;
+            default:
+                System.out.println("Invalid bread size.");
+                break;
         }
-        return String.format("%.2f", breadPrice);
+
+        return breadPrice;
     }
 
-    public String getMeatPrice(){
-        int chosenBreadSize = breadSizeOptions();
+
+
+    public double getMeatPrice(int sizeChoice) {
         double meatPrice = 0.0;
 
-        if (chosenBreadSize == 4){
-            meatPrice = 1.00;
-        } else if (chosenBreadSize == 8){
-            meatPrice = 2.00;
-        } else if (chosenBreadSize == 12){
-            meatPrice = 3.00;
+        switch (sizeChoice) {
+            case 1:
+                meatPrice = 1.00;
+                break;
+            case 2:
+                meatPrice = 2.00;
+                break;
+            case 3:
+                meatPrice = 3.00;
+                break;
         }
-        return String.format("%.2f", meatPrice);
+        return meatPrice;
     }
 
-    public String getExtraMeat(){
-        int chosenBreadSize = breadSizeOptions();
+    public double getExtraMeatPrice(int sizeChoice) {
         double extraMeatPrice = 0.0;
 
-        if (chosenBreadSize == 4){
-            extraMeatPrice = 0.50;
-        } else if (chosenBreadSize == 8){
-            extraMeatPrice = 1.00;
-        } else if (chosenBreadSize == 12){
-            extraMeatPrice = 1.50;
+        switch (sizeChoice) {
+            case 1:
+                extraMeatPrice = 0.50;
+                break;
+            case 2:
+                extraMeatPrice = 1.00;
+                break;
+            case 3:
+                extraMeatPrice = 1.50;
+                break;
         }
-        return String.format("%.2f", extraMeatPrice);
+        return extraMeatPrice;
     }
 
-    public String getCheesePrice(){
-        int chosenBreadSize = breadSizeOptions();
+    public double getCheesePrice(int sizeChoice) {
         double cheesePrice = 0.0;
 
-        if (chosenBreadSize == 4){
-            cheesePrice = 0.75;
-        } else if (chosenBreadSize == 8){
-            cheesePrice = 1.50;
-        } else if (chosenBreadSize == 12){
-            cheesePrice = 2.25;
+        switch (sizeChoice) {
+            case 1:
+                cheesePrice = 0.75;
+                break;
+            case 2:
+                cheesePrice = 1.50;
+                break;
+            case 3:
+                cheesePrice = 2.25;
+                break;
         }
-        return String.format("%.2f", cheesePrice);
+        return cheesePrice;
     }
 
-    public String getExtraCheese(){
-        int chosenBreadSize = breadSizeOptions();
+    public double getExtraCheesePrice(int sizeChoice) {
         double extraCheesePrice = 0.0;
 
-        if (chosenBreadSize == 4){
-            extraCheesePrice = 0.30;
-        } else if (chosenBreadSize == 8){
-            extraCheesePrice = 0.60;
-        } else if (chosenBreadSize == 12){
-            extraCheesePrice = 0.90;
+        switch (sizeChoice) {
+            case 1:
+                extraCheesePrice = 0.30;
+                break;
+            case 2:
+                extraCheesePrice = 0.60;
+                break;
+            case 3:
+                extraCheesePrice = 0.90;
+                break;
         }
-        return String.format("%.2f", extraCheesePrice);
+        return extraCheesePrice;
     }
 
-    public void addProduct(Product product){
-        this.customerOrder.add(product);
-    }
-
-    public String getDrinkPrice(){
-
-        String chosenDrinkSize = drinkSize;
+    public double getDrinkPrice(int drinkSizeChoice){
         double drinkPrice = 0.0;
 
-        if (chosenDrinkSize == "Small"){
-            drinkPrice = 2.00;
-        } else if (chosenDrinkSize == "Medium"){
-            drinkPrice = 2.50;
-        } else if (chosenDrinkSize == "Large"){
-            drinkPrice = 3.00;
+        switch (drinkSizeChoice) {
+            case 1:
+                drinkPrice = 2.00;
+                break;
+            case 2:
+                drinkPrice = 2.50;
+                break;
+            case 3:
+                drinkPrice = 3.00;
+                break;
         }
-        return String.format("%.2f", drinkPrice);
+        return drinkPrice;
     }
 
-
-
-    public int getSize() {
-        return size;
+    public double getChipsPrice(){
+        double chipsPrice = 1.50;
+        return chipsPrice;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public double getCheckoutTotal(int sandwichSizeChoice,
+                                   boolean extraMeat,
+                                   boolean extraCheese,
+                                   int drinkSizeChoice,
+                                   boolean chipsAdded
+    ) {
+        double totalPrice = getBreadPrice(sandwichSizeChoice) +
+                getMeatPrice(sandwichSizeChoice) +
+                getCheesePrice(sandwichSizeChoice);
+        if (extraMeat) {
+            totalPrice += getExtraMeatPrice(sandwichSizeChoice);
+        }
+
+        if (extraCheese) {
+            totalPrice += getExtraCheesePrice(sandwichSizeChoice);
+        }
+
+        if (drinkAdded) {
+            totalPrice += getDrinkPrice(drinkSizeChoice);
+        }
+        if (chipsAdded) {
+            totalPrice += getChipsPrice();
+        }
+
+        return totalPrice;
+    }
+
+    public void addSandwich(Sandwich sandwich){
+        this.sandwiches.add(sandwich);
+    }
+
+    public List<Sandwich> getSandwiches() {
+        return sandwiches;
+    }
+
+    public int getSize () {
+            return size;
+    }
+    public void setSize (int size){
+            this.size = size;
+        }
+    public String getDrinkSize () {
+            return drinkSize;
+        }
+    public void setDrinkSize (String drinkSize){
+            this.drinkSize = drinkSize;
+        }
+
+    public boolean isDrinkAdded() {
+        return drinkAdded;
+    }
+
+    public void setDrinkAdded(boolean drinkAdded) {
+        this.drinkAdded = drinkAdded;
+    }
+
+    public boolean isChipsAdded() {
+        return chipsAdded;
+    }
+
+    public void setChipsAdded(boolean chipsAdded) {
+        this.chipsAdded = chipsAdded;
     }
 
     @Override
     public String toString() {
         return "Order{" +
                 "size=" + size +
+                ", drinkSize='" + drinkSize + '\'' +
+                ", drinkAdded=" + drinkAdded +
+                ", chipsAdded=" + chipsAdded +
                 '}';
     }
 }

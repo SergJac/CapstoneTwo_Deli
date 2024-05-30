@@ -4,19 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sandwich extends Product{
-
     private static List<String> breadList = new ArrayList<>();
     private static List<String> meatList = new ArrayList<>();
     private static List<String> cheeseList = new ArrayList<>();
-    private static List<String> regToppingsList = new ArrayList<>();
+    private static List<String>  toppingsList = new ArrayList<>();
     private static List<String> saucesList = new ArrayList<>();
 
     private String bread;
     private String meat;
     private String cheese;
-    private String regToppings;
+    private String toppings;
     private String sauces;
-    private String sides;
+    private String size;
 
     static {
 
@@ -37,15 +36,15 @@ public class Sandwich extends Product{
         cheeseList.add("Cheddar");
         cheeseList.add("Swiss");
 
-        regToppingsList.add("Lettuce");
-        regToppingsList.add("Peppers");
-        regToppingsList.add("Onions");
-        regToppingsList.add("Tomatoes");
-        regToppingsList.add("Jalepenos");
-        regToppingsList.add("Cucumbers");
-        regToppingsList.add("Pickles");
-        regToppingsList.add("Guacamole");
-        regToppingsList.add("Mushrooms");
+        toppingsList.add("Lettuce");
+        toppingsList.add("Peppers");
+        toppingsList.add("Onions");
+        toppingsList.add("Tomatoes");
+        toppingsList.add("Jalepenos");
+        toppingsList.add("Cucumbers");
+        toppingsList.add("Pickles");
+        toppingsList.add("Guacamole");
+        toppingsList.add("Mushrooms");
 
         saucesList.add("Mayo");
         saucesList.add("Mustard");
@@ -57,14 +56,14 @@ public class Sandwich extends Product{
     }
 
 
-    public Sandwich(double price, String sides) {
+    public Sandwich(double price, String size) {
         super(price);
-        this.sides = sides;
+        this.size = size;
 
         this.bread = breadList.get(0);
         this.meat = meatList.get(0);
         this.cheese = cheeseList.get(0);
-        this.regToppings = regToppingsList.get(0);
+        this.toppings = toppingsList.get(0);
         this.sauces = saucesList.get(0);
     }
 
@@ -80,15 +79,13 @@ public class Sandwich extends Product{
         return cheeseList;
     }
 
-    public static List<String> getRegToppingsList(){
-        return regToppingsList;
+    public static List<String> getToppingsList(){
+        return toppingsList;
     }
 
     public static List<String> getSaucesList(){
         return saucesList;
     }
-
-
 
     public String getBread() {
         return bread;
@@ -114,12 +111,12 @@ public class Sandwich extends Product{
         this.cheese = cheese;
     }
 
-    public String getRegToppings() {
-        return regToppings;
+    public String getToppings() {
+        return toppings;
     }
 
-    public void setRegToppings(String regToppings) {
-        this.regToppings = regToppings;
+    public void setToppings(String toppings) {
+        this.toppings = toppings;
     }
 
     public String getSauces() {
@@ -130,12 +127,23 @@ public class Sandwich extends Product{
         this.sauces = sauces;
     }
 
-    public String getSides() {
-        return sides;
+    public String getSize() {
+        return size;
     }
 
-    public void setSides(String sides) {
-        this.sides = sides;
+    public void setSize(String size) {
+        this.size = size;
     }
 
+    @Override
+    public String toString() {
+        return "Sandwich{" +
+                "bread='" + bread + '\'' +
+                ", meat='" + meat + '\'' +
+                ", cheese='" + cheese + '\'' +
+                ", toppings='" + toppings + '\'' +
+                ", sauces='" + sauces + '\'' +
+                ", size='" + size + '\'' +
+                '}';
+    }
 }
